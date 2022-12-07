@@ -34,7 +34,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     const cargoStatus = document.getElementById("cargoStatus");
     const launchStatus = document.getElementById("launchStatus");
 
-
+    list.style.visibility = "hidden";
+    
    pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`
    copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`
 
@@ -51,7 +52,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    //Cargo checks
    if (cargoLevel > 10000) {
     list.style.visibility = "visible";
-    launchStatus.innerHTML = `Shuttle Not Ready For Launch`
+    launchStatus.innerHTML = `Shuttle Not Ready for Launch`
     launchStatus.style.color = "rgb(199, 37, 78)";
     cargoStatus.innerHTML = `Cargo mass too heavy for launch`
    } else {
